@@ -1,0 +1,1 @@
+rsync -e ssh -azv --delete-after duvallec@pil-23.univlehavre.lan:/var/www/html/ .

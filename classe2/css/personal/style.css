@@ -1,0 +1,1141 @@
+/********************************************************/
+/*****             Page Commune                     *****/
+/********************************************************/
+#Projets td, #Projets th{
+	width: 22.5%;
+}
+
+body{
+	font-family: 'Roboto', sans-serif!important;
+	color: rgb(51, 51, 51);
+	background-color: rgb(247, 247, 247) !important;
+
+}
+
+header{
+	font-family: 'Roboto slab', serif !important;
+}
+
+h1{
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	font-weight: 700 !important;
+	font-size: 2rem;
+	line-height: 40px;
+	margin-bottom: 25px;
+	word-break: break-word;
+}
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+
+header{
+	padding: 20px;
+}
+
+header .subtitle{
+	font-family: 'Roboto slab', serif !important;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1.7rem;
+}
+
+.apt {
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+}
+
+nav .nav-item a{
+	font-size: 1.5rem;
+	color: white;
+	text-align: right;
+	font-weight: 200;
+	text-decoration: none;
+}
+
+footer .nav-item a{
+	color: white;
+}
+
+nav .navbar-collapse{
+	margin: 0 !important;
+}
+
+main {
+	width: 100%;
+}
+
+footer{
+	padding: 40px;
+	text-align: center;
+
+}
+.navbar-brand {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-right: 1.3rem;
+}
+
+.dropdown-toggle{
+	color: white !important;
+	cursor: pointer;
+}
+
+.dropdown-item a{
+	color: rgb(51, 51, 51) !important;
+}
+
+.swal2-container p {
+	margin: 0 !important;
+}
+
+.btn{
+	white-space: normal;
+}
+
+.btn-group > [class*=btn-]{
+	display: inline-block;
+}
+
+.btn-group{
+	display: inline-block;
+}
+
+[class*=btn-]{
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    padding: 1.5rem 2rem;
+    transition: all 0.2s;
+    border-radius: 5rem;
+    -webkit-appearance: inherit !important;
+	line-height: 1.2;
+	margin-bottom: 0.5rem;
+}
+
+[class*=back-btn]{
+	position: absolute;
+	background-color: white;
+}
+
+.card-body p{
+	margin-bottom: 0;
+}
+
+.hide{
+	visibility: hidden;
+	display: none;
+	opacity: 0;
+}
+
+.card-body .btn{
+	margin-top: 1rem;
+}
+
+.back-btn-1{
+	top: 2%;
+}
+
+.back-btn-2{
+	bottom: 2%;
+}
+
+.container-fluid{
+	background-image: linear-gradient(to right, #465d74, #5b5b88, #884f88, #b13e6b, #c33c39);
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.form-label-group p{
+	margin-bottom: .5rem;
+}
+
+.flex-container-home{
+	display: flex;
+	align-items: center;
+}
+
+.img-home{
+	width: 40vw;
+	margin: 2rem;
+	float: right;
+}
+
+
+.modal-open .modal {
+	max-height: 100%;
+}
+
+.caroussel-container .card{
+	padding: 0;
+}
+
+main{
+	background-color: #f8f8ff;
+	padding-bottom: 3rem;
+}
+
+.nav-full .bottom-footer-container{
+    display: none;
+}
+
+footer{
+	margin-right: 0 !important;
+}
+
+footer h3 {
+    color: white;
+}
+/********************************************************/
+/*****      Menu deroulant (page reduite)           *****/
+/********************************************************/
+
+.hamburger-label {
+	font-weight: 600;
+	display: inline-block;
+	margin-left: 5px;
+	vertical-align: middle;
+	text-transform: uppercase;
+	color: white;
+}
+
+.img-brand{
+	width: 35vw;
+	margin-top: 2.5rem;
+	padding: .25rem;
+	max-width: 100%;
+	height: auto;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before, .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+	background-color: white;
+}
+
+.hamburger--accessible .hamburger-box {
+	vertical-align: middle;
+	color: white;
+}
+
+.navbar-toggler{
+	padding: 10px 0!important;
+	margin-bottom: .3125rem;
+}
+
+.navbar-collapse{
+	margin: 0.7rem 2rem;
+
+}
+
+.content-container{
+	padding: 0 20px;
+}
+
+.search-modal {
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	background-image: linear-gradient(to right, #465d74, #5b5b88, #884f88, #b13e6b, #c33c39);
+	transition: visibility .3s, opacity .3s ease-out;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	font-size: 3em;
+	line-height: 1.5em;
+	padding: 0 1.5%;
+}
+
+.search-modal .header-menu-full {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	margin: 0 2.5% 0 10px;
+}
+
+.search-modal #site-search{
+	width: 100%;
+}
+
+.search-modal .input-container button {
+	background-color: rgba(243, 244, 244, 1);
+	width: 3rem;
+	cursor: pointer;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	line-height: 0;
+}
+
+.search-modal .input-container button i {
+	font-size: 20px;
+}
+
+.search-modal .main-form-search {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin-top: 7.5rem;
+}
+
+.search-modal .input-container {
+	display: flex;
+}
+
+.search-modal label {
+	color: #f3f4f4;
+	font-weight: 100;
+	font-size: 35px;
+}
+
+.is-displayed {
+	visibility: visible;
+	opacity: 1;
+}
+
+/********************************************************/
+/*****             Form tmplt                    *****/
+/********************************************************/
+
+:root {
+	--input-padding-x: 1.5rem;
+	--input-padding-y: .75rem;
+}
+
+.form-tmplt .delete-container{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.toggle-password {
+	float: right;
+	margin-top: -32.5px;
+	margin-right: 20px;
+	cursor: pointer;
+	position: relative;
+	z-index: 5;
+}
+
+.form-tmplt{
+	background: #007bff;
+	background-image: linear-gradient(to right, #465d74, #5b5b88, #884f88, #b13e6b, #c33c39);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 20px 10px;
+}
+
+.card-signin {
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+	margin: 5rem 0;
+}
+
+.card-signin .card-title {
+	font-family: 'Montserrat';
+	margin-bottom: 1rem;
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+.card-signin .card-subtitle{
+	margin-bottom: 1rem;
+}
+
+.card-signin .card-body {
+	padding: 2rem;
+}
+
+.form-signin {
+	width: 100%;
+}
+
+.form-tmplt .btn {
+	font-size: 80%;
+	border-radius: 5rem;
+	letter-spacing: .1rem;
+	font-weight: bold;
+	padding: 1rem;
+	transition: all 0.2s;
+}
+
+.form-tmplt .flex-div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 20px 20px 20px;
+}
+
+.form-tmplt .flex-div p {
+	padding: 0 !important;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.form-tmplt .flex-div input, .form-tmplt .flex-div select {
+	padding: 3px !important;
+	width: 100%;
+}
+
+.form-label-group {
+	position: relative;
+	margin-bottom: 1rem;
+}
+
+.form-label-group input {
+	height: auto;
+	border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+	padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	margin-bottom: 0;
+	line-height: 1.5;
+	color: #495057;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	transition: all .1s ease-in-out;
+}
+
+.form-label-group input::placeholder {
+	color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+	padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+	padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+	padding-top: calc(var(--input-padding-y) / 3);
+	padding-bottom: calc(var(--input-padding-y) / 3);
+	font-size: 12px;
+	color: #777;
+}
+
+.btn-google {
+	color: white;
+	background-color: #ea4335;
+}
+
+
+/********************************************************/
+/*****             Menu (Gauche)                    *****/
+/********************************************************/
+
+.logoPosition
+{
+	display: flex;
+	z-index: 999;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.bottom-footer-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.btn-admin{
+	background-color: white;
+	color: #007bff;
+	margin-top: 0.3rem;
+}
+
+.btn-admin:hover{
+	text-decoration: none;
+}
+
+.btn-inscription, .btn-connection{
+	display: block;
+	background-color: white;
+	margin-right: 7.5px;
+}
+
+.btn-inscription{
+	background-color: #007bff;
+	color: #fff;
+}
+
+.btn-inscription:hover, .btn-connection:hover{
+	text-decoration: none;
+}
+
+.dropup .dropdown-menu {
+	width: 98%;
+	text-align: center;
+}
+/********************************************************/
+/*****         Accueil                *****/
+/********************************************************/
+/*Partie qui gere la video de presentation*/
+#videoPresentation {
+	width: 100%;
+	height: 75%;
+}
+
+.video {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+/*autour du slide*/
+.slideContent
+{
+	background-color: purple;
+	text-align: center;
+	border: solid 1px black;
+	border-radius: 10px;
+	height: 100%;
+}
+
+/*il est possible de modifier l'affichage de chaque ligne comme tout le temps*/
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+	bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+	background: #a3a3a3;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+}
+
+.blog .carousel-indicators .active {
+	background: #707070;
+}
+
+.link-to-project{
+	padding: 1rem 0;
+	display: flex;
+	align-items: center;
+}
+
+.link-to-project .text-center{
+	margin-bottom: 0;
+}
+
+/********************************************************/
+/*****     Style commun Liste : ACTU/PUBLI/THESE    *****/
+/********************************************************/
+
+.listCard{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.listCard .card{
+	color: white;
+	background-color: #465D74;
+	margin: 10px;
+	width: 30%;
+}
+
+main-content .accordion{
+	margin-bottom: 10px;
+}
+
+/********************************************************/
+/*****             Page Liste Actualites                *****/
+/********************************************************/
+
+.article{
+	background: #C33C39;
+}
+
+.evenement{
+	background: #465D74;
+}
+
+.date{
+	font-style: italic;
+	padding-top: 10px;
+	border-top: solid 1px;
+}
+
+/********************************************************/
+/*****             Page Liste Publications            *****/
+/********************************************************/
+
+#listPubli .card{
+	background: #465D74;
+}
+
+/********************************************************/
+/*****     Style commun ACTU/PUBLI/THESE    *****/
+/********************************************************/
+.main_content{
+	display: flex;
+	flex-direction: column;
+}
+.medias{
+	margin-bottom: 10px;
+}
+
+.cardMedia{
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.cardMedia p {
+	margin: 10px;
+}
+
+#icon-pdf{
+	max-width: 100px;
+}
+
+video{
+	width: 100%;
+}
+
+/********************************************************/
+/*****             Actualite                        *****/
+/********************************************************/
+
+.figure {
+	max-width: 40%;
+	margin: 15px;
+}
+
+/********************************************************/
+/*****             Publication                        *****/
+/********************************************************/
+.icon_info{
+	width: 50px;
+}
+
+.icon_info:hover{
+	opacity: 0.5;
+}
+
+/********************************************************/
+/*****             Form                   *****/
+/********************************************************/
+.mediasFormActu{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.imageFormActu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.imageFormActu button{
+	margin-top: 15px;
+	width: 50%;
+}
+
+.mediaForm{
+	margin: 20px;
+}
+
+/********************************************************/
+/*****             Profil                           *****/
+/********************************************************/
+.pageProfil {
+	padding-bottom: 40px;
+}
+
+/*Element qui permet de gerer la fiche d'identite*/
+.ficheIden {
+	text-align: center;
+	border: solid black 1px;
+	border-radius: 10px;
+	padding: 2%;
+	margin: 2%;
+}
+
+.information {
+	margin: auto;
+	font-size: large;
+}
+
+.projetDesc {
+	width: auto;
+}
+
+/*PDF*/
+.pdf {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*video*/
+embed.video {
+	margin: 1%;
+}
+
+/**************/
+/* Action */
+/**************/
+
+.page.action{
+	background: #33AEFF;
+}
+
+/********************************************************/
+/*****             Page Dashboard admin             *****/
+/********************************************************/
+.pageAdmin .card{
+	margin-bottom: 2rem;
+}
+
+.pageAdmin .card-text{
+	margin-bottom: 0;
+}
+
+.pageAdmin .card .card-body{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.pageAdmin .card .fas{
+	font-size: 2rem;
+	margin-left: 1rem;
+}
+
+.options-container{
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.table td, .table th {
+	vertical-align: inherit;
+}
+
+.modal-header{
+	display: block;
+}
+
+.main-form-search .fa-search{
+	font-size: 20px;
+}
+
+.main-form-search .input-container{
+	display: flex;
+}
+
+.main-form-search .site-search{
+	background-color: rgba(243, 244, 244, 1);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.main-form-search .button-search-container{
+	background-color: rgba(243, 244, 244, 1);
+	cursor: pointer;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+[class*=pageAdmin] .card-header{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+[class*=pageAdmin] .list-group-item {
+    padding: .75rem 1.25rem .75rem 2.2rem;
+}
+
+[class*=pageAdmin] .card-checkbox-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+[class*=pageAdmin] .card-checkbox-container [class*=col-lg-]{
+    padding: 0 !important;
+}
+
+[class*=pageAdmin] .card{
+    margin: 0.5rem;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    height: inherit;
+    width: inherit;
+}
+
+input, select{
+    display: block;
+    padding-left: 10px;
+    height: 40px;
+    font-weight: 200;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    resize: none;
+    background-color: rgba(243, 244, 244, 0.23);
+}
+
+[class*=pageAdmin] .custom-select{
+	line-height: inherit !important;
+}
+
+[class*=pageAdmin] .site-search, .filter-select{
+    width: 18rem;
+}
+
+
+/********************************************************/
+/*****             Page Laboratoire                 *****/
+/********************************************************/
+/*permet de justifier le texte de presentation des labos*/
+.presLabo {
+	text-align: justify;
+}
+
+/*permet de donner la dimension souhaitée à l'image des labos*/
+
+.pageLabo {
+	padding-bottom: 40px;
+}
+
+.pageLabo .card-body{
+	display: flex;
+	align-items: center;
+		justify-content: space-around;
+}
+
+.pageLabo .card.col-lg-12{
+	padding: 0 !important;
+	margin-left: 15px;
+	margin-bottom: 2rem;
+}
+
+/********************************************************/
+/*****              Media queries                   *****/
+/********************************************************/
+
+@media all and (max-width: 991px){
+	.offset-2{
+		margin-left:0px !important;
+	}
+
+    .nav-full .bottom-footer-container{
+         display: block;
+     }
+
+    .navbar-expand-lg > .bottom-footer-container{
+        display: none;
+    }
+
+    .navbar{
+        justify-content: center;
+    }
+
+	[class*=pageAdmin] .site-search, .filter-select {
+		width: 100%;
+	}
+
+	.img-brand{
+		width: 65vw;
+		margin-top: 1rem;
+	}
+
+	.img-home{
+		float: none;
+		margin: 1rem auto;
+		width: 75vw;
+		display: block;
+	}
+
+	nav .nav-item a {
+		text-align: center;
+	}
+
+	.logoPosition {
+		align-items: center!important;
+        background-image: linear-gradient(to right, #465d74, #5b5b88, #884f88, #b13e6b, #c33c39);
+	}
+
+	body > .row > .offset-3 {
+		margin-left: 0;
+	}
+
+	.back-container{
+		width: 100%;
+	}
+
+	.form-tmplt{
+		height: inherit;
+		align-items: center;
+	}
+
+	[class*=back-btn]{
+		position: inherit;
+	}
+
+	.collapsing, .show{
+		overflow-y: scroll;
+		height: auto;
+		max-height: 17.5rem;
+		overflow-x: hidden;
+		flex-direction: column;
+		display: block;
+		text-align: center;
+	}
+
+	.listCard .card {
+		width: inherit;
+	}
+
+	.collapsing .text-right, .show .text-right{
+		text-align: inherit !important;
+	}
+
+	.form-tmplt .flex-div {
+		align-items: inherit;
+	}
+	.navbar-brand {
+		margin-right: 0;
+	}
+
+	.btn-admin{
+		margin-top: 0;
+		margin-left: 0.3rem;
+	}
+
+	.pageAdmin .card .card-body {
+		justify-content: center;
+	}
+
+	.pageAdmin .card .card-text {
+		margin: 1rem 0;
+	}
+
+	.pageAdmin .icon-container .fas {
+		margin: 0;
+	}
+
+	.flex-container-home {
+		display: block;
+	}
+
+    .options-container{
+        justify-content: center;
+
+    }
+
+    .options-container .filter {
+        margin-bottom: .5rem;
+    }
+
+    footer .img-thumbnail{
+        width: 5rem;
+    }
+
+    footer .row{
+        margin-bottom: 2rem;
+    }
+}
+
+@media all and (max-height: 836px){
+	.pageForgotpwd, .pageResetpwd{
+		height: 100vh;
+	}
+
+	.pageInsc{
+		height: inherit;
+		align-items: center;
+	}
+}
+
+@media all and (min-width: 576px) {
+	.modal-dialog {
+		max-width: 700px;
+		margin: 1.75rem auto;
+	}
+
+	.img-brand{
+		width: 35vw;
+	}
+}
+
+@media all and (max-height: 650px){
+	.pageForgotpwd, .pageResetpwd{
+		height: inherit;
+	}
+}
+
+@media all and (min-width: 992px){
+	#menuFixed{
+		height: 100vh;
+	}
+
+	.navbar-expand-lg .navbar-collapse{
+		display: block !important;
+	}
+
+	.nav-full{
+		display: block !important;
+	}
+
+    .table-responsive{
+        display: table;
+    }
+}
+
+
+/********************************************************/
+/*****              Modif action                   *****/
+/********************************************************/
+.modifAction
+{
+	text-align: center;
+	border: solid black 1px;
+	border-radius: 10px;
+	padding: 2%;
+	margin: 2%;
+}
+
+/********************************************************/
+/*****              Ajout action                   *****/
+/********************************************************/
+.ajoutAction
+{
+	border: solid black 1px;
+	border-radius: 10px;
+	padding: 2%;
+	margin: 2%;
+	color: white;
+}
+
+/********************************************************/
+/*****              Modif profil                   *****/
+/********************************************************/
+.modifProfil
+{
+	border: solid black 1px;
+	border-radius: 10px;
+	padding: 2%;
+	margin: 2%;
+}
+
+/********************************************************/
+/*****              Contact		                     *****/
+/********************************************************/
+.ficheContact
+{
+	border-radius: 10px;
+	padding: 2%;
+	margin: 2%;
+}
+
+.contact {
+	margin: auto;
+}
+.ficheContact
+table {
+    margin-bottom: 0 !important;
+}
+.ficheContact
+tr{
+    border: 1px solid #eee;
+}
+.ficheContact
+td{
+    padding: 1rem;
+    border: 1px solid #eee;
+}
+.ficheContact
+tbody {
+    font-weight: 600;
+}
+.ficheContact
+table tr:nth-child(odd) {
+    background-color: rgba(168, 38, 27, 0.05);
+}
+.ficheContact
+table tr:nth-child(odd):hover {
+    background-color: rgba(168, 38, 27, 0.1);
+}
+.ficheContact
+table tr:nth-child(even) {
+    background-color: rgba(128, 33, 23, 0.05);
+}
+.ficheContact
+table tr:nth-child(even):hover {
+    background-color: rgba(128, 33, 23, 0.1);
+}
+
+#explorateur-dossier ul { margin:0; list-style-type: none; }
+#explorateur-dossier .dossierParent { position:relative; padding-left:20px; cursor:pointer;}
+#explorateur-dossier .sub_dir { position:relative; padding-left:20px; cursor:pointer; display:none; }
+#explorateur-dossier .fils { position:relative; padding-left:20px; }
+
+.fichierChoisi{
+	margin-top: 1%;
+}
+
+.mois, .annee, .sourcefichiers{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1%;
+}
+
+.fichier
+{
+	margin-top: 1%;
+}
+
+.cocherdecocher .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+	background-color: green!important;
+}
+
+.mois .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+	background-color: steelblue!important;
+}
+
+.annee .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+	background-color: steelblue!important;
+}
+
+.sourcefichiers .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+	background-color: steelblue!important;
+}
+
+

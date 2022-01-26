@@ -1,0 +1,39 @@
+**************************************
+***************README*****************
+**************************************
+
+Voici les étapes à suivre pour la création d'un nouveau projet.
+VEILLEZ A BIEN RESPECTER L'ORDRE SUIVANT et ASSUREZ VOUS D'ETRE SUPER-ADMINISTRATEUR dans la BDD "commune" table "utilisateur".
+
+1/Créez un nouveau dossier avec le nom du projet en MINUSCULE ('project').
+
+2/Copiez l'intégralité du dossier "template" dans le dossier du nouveau projet.
+
+3/Créez une nouvelle base de donnée (BDD) qui portera EXACTEMENT le même nom que votre dossier précédemment créé ('project').
+
+4/Copiez le contenu du fichier "bdd/template.sql" et collez le dans la section 'SQL' de votre nouvelle BDD de phpmyadmin.
+
+5/Copiez le logo de votre projet au format suivant "project_logo.png" (où 'project' = nom de votre nouveau projet) dans le dossier media/
+
+6/Dans le fichier "functions/config.php" du nouveau project ('project'), changez la valeur des variables suivantes :
+    - $nameprojetgeneral = "project" (--> avec le nom de votre nouveau projet en minuscule)
+    - $detailprojetgeneral = "" (--> Indiquer une présentation courte qui s'affichera dans l'en-tête du site)
+
+7a/Connectez vous avec identifiants super-admin sur le site d'un projet déjà existant et accéder au Panel-Admin.
+7b/Accédez à la section "Gestion des projets" et créez un nouveau projet avec le même nom ('project').
+7c/Accédez à la section "Gestion des accès aux projets" pour vous ajouter en tant qu'administrateur du nouveau projet.
+
+VOTRE PROJET EST DESORMAIS FONCTIONNEL
+
+**************************************
+***************OPTION*****************
+**************************************
+
+Vous pouvez changez les logos des partenaires et des sponsors en insérant les logos dans le dossier /media/image/logo
+ET en modifiant le fichier "/includes/footer.php"
+
+Les couleurs du site web sont à changer directement dans le fichier "css/personal/style.css"
+
+**************************************
+**************************************
+

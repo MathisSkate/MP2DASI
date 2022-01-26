@@ -1,0 +1,26 @@
+{
+	"fr": {
+		"header": {
+			"a": "Projet Recherche Normandie"
+		},
+
+		"index": {
+			"a": "Lien vers le projet",
+			"b": "Début : ",
+			"c": "Fin : "
+		}
+	},
+
+
+	"en": {
+		"header": {
+			"a": "Normandy Research Project"
+		},
+
+		"index": {
+			"a": "Link to the project",
+			"b": "Start : ",
+			"c": "End : "
+		}
+	}
+}

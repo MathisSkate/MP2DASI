@@ -1,0 +1,380 @@
+{
+  "menu": {
+	"a": "Menu",
+    "b": "Home",
+    "c": "Actions",
+	"c-0": "Read actions", 
+    "c-1": "Action 0",
+	"c-2": "Action 1",
+    "c-3": "Action 2",
+    "c-4": "Action 3",
+    "c-5": "Action 4",
+    "c-6": "Action 5",
+    "d": "Laboratories",
+    "e": "News",
+    "f": "Publications",
+    "g": "Thesis"
+  },
+
+  "header": {
+	"a": "Project CLASSE 2 "
+    "b": "Logistic's corridors : Application to la vallée de Seine and its environment Phase-2"
+  },
+  
+  "footer":{
+	"a": "Financed by :",
+	"b": "Developed by :",
+	"b-1": "Aymeric CELLIER",
+	"b-2": "Dorian GUILLAUME",
+	"b-3": "Pierre RIBET",
+	"b-4": "Clément THENARD"
+
+  },
+  "action": {
+	"a": "No subaction"
+  },
+  
+  "actions": {
+	"a": "News",
+    "b": "More information !"
+  },
+  "actualite": {
+	"a": "Published the ",
+    "b": "by"
+  },
+  
+  "actualites": {
+	"a": "News ",
+	"b": "Published the",
+	"c": "by",
+    "d": "More information !"
+  },
+  
+  "admin_panel": {
+			"a": "Dashboard administration ",
+			"b": "Project access management",
+			"c": "With supporting text below as a natural lead-in to additional content.",
+			"d": "Users management"
+			"e": "Laboratories management",
+			"f": "Project management",
+		},
+		
+		"admin_select_user": {
+			"a": "Edit"
+		},
+		
+		"admin_select_user_active": {
+			"a": "Edit"
+		},
+		
+		"admin_utilisateurs": {
+			"a": "Users management",
+			"b": "Sort by",
+			"c": "Increasing ID ",
+			"d": "Descending ID",
+			"e": "Last name by alphabetical order",
+			"f": "Last name by reverse alphabetical order",
+			"g": "First name by alphabetical order",
+			"h": "First name by reverse alphabetical order",
+			"i": "Status by alphabetical order",
+			"j": "Status by reverse alphabetical order",
+			"k": "Establishment by alphabetical order",
+			"l": "Establishment by reverse alphabetical order",
+			"m": "Email by alphabetical order",
+			"n": "Email by reverse alphabetical order",
+			"o": "Admin displayed first",
+			"p": "User displayed first",
+			"q": "Active user displayed first",
+			"r": "Inactive user displayed first",
+			"s": "Add user",
+			"t": "ID",
+			"u": "Last name",
+			"v": "First name",
+			"w": "Status",
+			"x": "Establishment",
+			"y": "E-mail adress",
+			"z": "Admin",
+			"aa": "Active",
+			"bb": "Actions",
+			"cc": "Close",
+			"dd": "Edit User",
+			"ee": "Chose your status",
+			"ff": "Chose your laboratory",
+			"gg": "Laboratory",
+			"hh": "website : http://",
+			"ii": "User access:",
+			"jj": "User activity :",
+			"kk": "User",
+			"ll": "Save changes",
+			"mm": "Delete user",
+			"oo": "ID (automaticaly added)",
+			"pp": "Access",
+			"qq": "Password",
+			"rr": "Add"
+		},
+		
+		"admin_utilisateurs_activation": {
+			"a": "Project access management",
+			"b": "Sort by",	
+			"d": "Last name by alphabetical order",
+			"e": "Last name by reverse alphabetical order",
+			"f": "First name by alphabetical order",
+			"g": "First name by reverse alphabetical order",
+			"h": "Email by alphabetical order",
+			"i": "Email by reverse alphabetical order",
+			"j": "Last name",
+			"k": "First name",
+			"l": "E-mail adress",
+			"m": "Actions",
+			"n": "Close",
+			"o": "Edit User",
+			"p": "ID",
+			"q": "Project access : ",
+			"r": "If you don't want a user to have access to this project, don't check any boxes of it",
+			"s": "User",
+			"t": "Administrator",
+			"u": "Save changes"
+		},
+		
+		"ajoutaction": {
+			"a": "Creation of actions :",
+			"b": "Action name :",
+			"c": "Add Sub-action",
+			"d": "Delete sub-action",
+			"e": "Confirm"
+		},
+  
+  "connection": {
+	"a": "CLASSE 2 - Connexion",
+	"b": "Back to homepage",
+	"c": "Login to CLASSE 2",
+    "d": "E-mail adress",
+	"e": "Password",
+	"f": "Keep my signed in",
+	"g": "Sign in",
+	"h": "Forgot password",
+	"i": "Back to previous page"
+  },
+  
+  "forgotpassword": {
+	"a": "Back to homepage",
+	"b": "Forgot password",
+	"c": "Stage 1/2",
+    "d": "E-mail adress",
+	"e": "Send a reset password e-mail",
+	"f": "Back to previous page"
+  },
+  
+  "formActualite": {
+			"a": "Title",
+			"b": "Type",
+			"c": "Resume",
+			"d": "Actuality",
+			"e": "Picture",
+			"f": "Chose your picture(png/jpg)",
+			"g": "Video",
+			"h": "Chose your video(mp4)",
+			"i": "File PDF",
+			"j": "Chose your file(pdf)",
+			"k": "Confirm"
+		},
+  
+  "index": {
+	"a": "Project presentation : ",
+	"b": "CLASSE succeed GRR LMN projects <a href=\"http://lmah.univ-lehavre.fr/~michel/wiki-passageportuaire/doku.php\">« Harbour Passage »</a>, « global logistics performance improvement » and « CLASSE phase 1 », certified by the center of excellence Novalog (november 2014). In the course of the works leading, interdisciplinarity and the collaborations between establishment have developed. this collaboration is materialized by the university of Le Havre Logistic Federative Structure (SFLog), certified by the ministry, destinated to  gather different active laboratories in the logistics area.",
+	"c": "The subject of this search poject, goods flow in a logistics corridor and its interface, is studying in a tripple perspective",
+    "d": "Spatial dynamics perspective :&nbsp; Descriptive study and flow dynamics, concentrations, transportation, instalation localized in a given territory (Seine's axes for exemple),Space structurations evolution, employment and skills along and in periferal of Seine's axes(periferal areas like Picardie, Pays de Loire, Centre).",
+	"e": "Opérational and strategic perspective of the modeling and simulation to deduce recommendation in terms of operation condition of the multimodal chain, sizing and localization.",
+	"f": "Global supply chain perspective which integrated logistics corridors in a lager environment of modeling chain or thinner of the last kilometer.",
+	"g": "Structuring project, CLASSE gather various researcher in a way coherent and convergent (about 70 people involved) for the same goal :&nbsp; contribute to the performance improvement and collective skills emergency (beyond the research community) to develop territories attractivity.",
+	"h": "Would you like to see what are the projects present on the website ?",
+	"i": "Click on the button on the right.",
+	"j": "Visualize the projects",
+	"k": "Read more..",
+	"l": "Published the ",
+	"m": "by "
+  },
+  
+  "inscription": {
+	"a": "Back to homepage",
+	"b": "Registration to Classe 2",
+	"c": "Chose your avatar :",
+    "d": "Last name : ",
+	"e": "First name : ",
+	"f": "Establishment:",
+	"g": "Website : http://",
+	"h": "Chose your status :",
+	"i": "Status",
+	"j": "Chose your Laboratory :",
+	"k": "Laboratory",
+	"l": "E-mail Adress",
+	"m": "Password",
+	"n": "Create an account",
+	"o": "Back to previous page"
+  },
+  
+  "laboratoire": {
+	"a": "Laboratories :"
+  },
+  
+  "modification": {
+			"a": "Identity form : ",
+			"b": "No sub-action",
+			"c": "Comfirm"
+		},
+  
+  "modifProfil": {
+	"a": "Identity form : ",
+	"b": "Last name : ",
+	"b-1": "None release",
+	"c": "First name : ",
+	"c-1": "None release",
+    "d": "Establishment : ",
+	"d-1": "None release",
+	"e": "Website : ",
+	"e-1": "None release",
+	"f": "Status :",
+	"f-1": "None release",
+	"g": "Laboratory :",
+	"g-1": "None release",
+	"h": "E-mail Adress :",
+	"h-1": "None release",
+	"i": "Confirm"
+  },
+  
+  "paneladmin": {
+			"a": "Dashboard administration"
+		},
+  
+  "profil": {
+	"a": "Identity form : ",
+	"b": "Last name : ",
+	"b-1": "None release",
+	"c": "First name : ",
+	"c-1": "None release",
+    "d": "Establishment : ",
+	"d-1": "None release",
+	"e": "Website : ",
+	"e-1": "None release",
+	"f": "Status :",
+	"f-1": "None release",
+	"g": "Laboratory :",
+	"g-1": "None release",
+	"h": "E-mail Adress :",
+	"h-1": "None release",
+	"i": "Modify",
+	"j": "Task : ",
+	"j-1": "None Task current for ",
+	"k": "Publication published : ",
+	"k-1": "None publication current for ",
+	"l": "Thesis : ",
+	"l-1": "None thesis current for ",
+	"m": "Did",
+	"n": "publication",
+	"o": "publications",
+	"p": "thesis",
+	"q": "thesis"
+  },
+  
+  "publication": {
+			"a": "The authors of this publication are :",
+			"b": "Source",
+			"c": "For more information :",
+			"d": "Picture",
+			"e": "Video",
+			"f": "File",
+			"g": "Filed online by : "
+		},
+		
+		"publications": {
+			"a": "Publication",
+			"b": "Published by :",
+			"c": "More information !"
+		},
+  
+  "resetpassword": {
+	"a": "CLASSE 2 - Password reset ",
+	"b": "Back to homepage",
+	"c": "Forgot password",
+    "d": "password",
+	"e": "Confirm password",
+	"f": "reset password",
+	"g": "Problem in the link, 2 explanations possible : ",
+	"h": "Wrong token",
+	"i": "Expired link (after 1h)",
+	"j": "Redo the reset password form.",
+	"k": "Back to the form",
+	"l": "Wrong Token, have you tried to make a fake token ?",
+	"m": "Back to previous page"
+  },
+  
+  "search": {
+			"a": "Result for research : ",
+			"b": "Sort by",
+			"c": "Increasing ID",
+			"d": "Descending ID",
+			"e": "Last name by alphabetical order",
+			"f": "Last name by reverse alphabetical order",
+			"g": "First name by alphabetical order",
+			"h": "First name by reverse alphabetical order",
+			"i": "Status by alphabetical order",
+			"j": "Status by reverse alphabetical order",
+			"k": "Establishment by alphabetical order",
+			"l": "Establishment by reverse alphabetical order",
+			"m": "Email by alphabetical order",
+			"n": "Email by reverse alphabetical order",
+			"o": "Admin displayed first",
+			"p": "User displayed first",
+			"q": "Active user displayed first",
+			"r": "Inactive user displayed first",
+			"s": "Search user",
+			"t": "ID",
+			"u": "Last name",
+			"v": "First name",
+			"w": "Status",
+			"x": "Establishment",
+			"y": "E-mail adress",
+			"z": "No results for search"
+		},
+		
+		"Sendmail": {
+			"a": "You forgot your password - Classe 2",
+			"b": "Hello, \nYou recently asked to reset your password. \nHere is the link to reset it :\n https://classe.cs-dc.org/CLASSE/new/Template/resetpassword.php?email=$email&token=$token\n\nCordialement,\nCLASSE 2 TEAM."
+		},
+		
+		"Singin": {
+			"a": "Your account has been created. However, administrator has not yet activated this one. You will receive an email when it is activated. \n",
+			"b": "Be careful to not forget your email and your password :\n",
+			"c": "Email :",
+			"d": "\nPassword :",
+			"e": "\n\nCordially, \nCLASSE 2 TEAM."
+		},
+		
+		"supprimeraction": {
+			"a": "Creation of actions :",
+			"b": "Action you want to delete :",
+			"c": "Confirm"
+		},
+		
+		"these": {
+			"a": "Director :",
+			"b": "Co-enforcer :",
+			"c": "The jury consists of :",
+			"d": "Source",
+			"e": "For more information :",
+			"f": "Picture",
+			"g": "No picture available for this publication",
+			"h": "Video",
+			"i": "No video available for this publication",
+			"j": "File",
+			"k": "No file available for this publication",
+			"l": "Filed online by"
+		},
+		
+		"theses": {
+			"a": "Thesis",
+			"b": "Thesis director :",
+			"c": "More information !"
+		},
+  },
+}
