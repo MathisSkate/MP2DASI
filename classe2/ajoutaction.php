@@ -72,7 +72,7 @@ include_once "includes/header.php";
                             };
                         }
                     </script>
-                    <!--input qui garde en memoire le nombre de sous-action-->
+                    <!--input qui garde en mémoire le nombre de sous-action-->
                     Lien vers la video :
                     <input type="url" name="inputLienAction" id="inputLienAction"
                            class="form-control" placeholder="Lien vers la video de l'action (si plusieurs videos, faire : video1;video2;)"
