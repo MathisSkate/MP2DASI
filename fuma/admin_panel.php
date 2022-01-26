@@ -2,22 +2,11 @@
 
 include_once "includes/header.php";
 
-
-if ($_SESSION['isSuperAdmin'] == 0) {
-                     echo '<meta http-equiv="refresh" content="0; URL= admin_redirect.php">';
-
-
-
-
-
-                    }
-            else {
-
-$stmt = $bdd->prepare("SELECT tab1.id_utilisateur, tab1.nom_utilisateur, tab1.prenom_utilisateur, tab1.statut_utilisateur, tab1.etablissement_utilisateur, tab1.mail_utilisateur, tab1.mail_utilisateur, tab1.actif_utilisateur , tab2.admin 
+$stmt = $bdd->prepare("SELECT tab1.id_utilisateur, tab1.nom_utilisateur, tab1.prenom_utilisateur, tab1.statut_utilisateur, tab1.etablissement_utilisateur, tab1.mail_utilisateur, tab1.mail_utilisateur, tab1.super_admin , tab2.admin 
                                 FROM commune.utilisateur AS tab1 
                                 JOIN commune.participer AS tab2 
                                 ON tab1.id_utilisateur = tab2.id_utilisateur
-                                WHERE tab1.actif_utilisateur = '0'
+                                WHERE tab1.super_admin = 1
                                 ORDER BY `id_utilisateur` DESC");
 $stmt->execute();
 $donnees = $stmt->fetchAll();
@@ -71,13 +60,8 @@ $donnees = $stmt->fetchAll();
                     </div>
                 </div>
             </div>
-
-
-
-
         </section>
     </main>
 <?php
 include_once "includes/footer.php";
-}
 ?>
