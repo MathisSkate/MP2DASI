@@ -14,7 +14,7 @@ if(!isset($_SESSION['lang'])){
 }
 
 try {
-    $bdd=new PDO('mysql:host=localhost;dbname='.$nameprojetgeneral.';charset=utf8','root','toor');
+    $bdd=new PDO('mysql:host=localhost;dbname='.$nameprojetgeneral.';charset=utf8','root','root');
 } catch (Exception $e) {
     die('erreur:' . $e->getMessage());
 }

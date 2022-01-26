@@ -32,7 +32,7 @@ function suppr_accents($str, $encoding='utf-8')
 }
 
 try{
-    $bdd=new PDO('mysql:host=localhost;dbname='.$nameprojetgeneral.';charset=utf8','root','toor');
+    $bdd=new PDO('mysql:host=localhost;dbname='.$nameprojetgeneral.';charset=utf8','root','root');
 }
 catch(Exception $e)
 {
