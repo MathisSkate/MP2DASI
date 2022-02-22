@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: doria
- * Date: 25/02/2019
- * Time: 14:12
- */
 
 include_once "includes/header.php";
 require_once "functions/selectMedia.php";
@@ -12,7 +6,7 @@ require_once "functions/selectMedia.php";
 //Requête pour récupérer les différents types d'actualités possible
 $reqTypePub = $bdd->query("SHOW COLUMNS FROM publication");
 $tablePub = $reqTypePub->fetchAll();
-$enumType = substr($tablePub[4]['Type'], 6, -2);
+$enumType = substr($tablePub[3]['Type'], 6, -2);
 $types = explode("','", $enumType);
 
 //Récupérer le nom de la page précédente
@@ -26,9 +20,31 @@ if ($lastPage != "publications.php") {
     $modif = true;
 
     //Rquête pour récupéré informations sur actualite si modif
-    $reqPub = $bdd->prepare("SELECT titre_publication, annee_publication, type_publication, auteur_publication, information_publication, lien_publication, id_action FROM publication WHERE id_publication = " . $idPub . " ");
+    $reqPub = $bdd->prepare("SELECT titre_publication, annee_publication, type_publication, information_publication, lien_publication, id_action FROM publication WHERE id_publication = " . $idPub . " ");
     $reqPub->execute();
     $publication = $reqPub->fetch();
+
+    /*Pour afficher les personnes en lien avec l'action*/
+    $req = $bdd->prepare('
+    SELECT
+        tab1.id_utilisateur,
+        tab1.nom_utilisateur,
+        tab1.prenom_utilisateur
+    FROM
+        commune.utilisateur AS tab1
+    JOIN ' . $nameprojetgeneral . '.utilisateur_detail AS tab2
+    ON
+        tab1.id_utilisateur = tab2.id_utilisateur
+    JOIN ' . $nameprojetgeneral . '.publier AS tab3
+    ON
+        tab2.id_utilisateur_detail = tab3.id_utilisateur_detail   
+    JOIN ' . $nameprojetgeneral . '.publication AS tab4
+    ON
+        tab3.id_publication = tab4.id_publication
+    WHERE 
+        tab3.id_publication = :idPubli');
+    $req->execute([':idPubli' => $idPub]);
+    $reqUtil = $req->fetchAll();
 
     //Requête pour récupéré média si modif
     $images = selectMedia($bdd, 'publication', $idPub, 'image');
@@ -56,47 +72,53 @@ if ($lastPage != "publications.php") {
                        } ?>" required>
             </div>
             <div class="form-group">
-                <label><?php echo $q[$_SESSION['lang']]['formActualite']['c']?></label>
+                <label><?php echo $q[$_SESSION['lang']]['formActualite']['c'] ?></label>
                 <select class="form-control type-select" name="typePublication" required>
-                    <option class="type" selected>
+                    <!--<option class="type" selected>
                         <?php
-                        if ($modif) {
+                        /*if ($modif) {*/
                             echo $publication['type_publication'];
-                        } else {
+                        /*} else {
                             echo $q[$_SESSION['lang']]['formPublication']['d'];
-                        }
+                        }*/
                         ?>
-                    </option>
+                    </option>-->
                     <?php
-
-                    foreach ($types as $type){
-                        if ($type == $actualite['type_publication']){
+                    foreach ($types as $type) {
+                        /*if ($type == $actualite['type_publication']) {
                             echo "";
-                        }
-                        else
-                        {
-                            echo "<option value='".$type."'>".$type."</option>";
-                        }
-                    }?>
+                        } else {*/
+                            echo "<option value='" . $type . "'>" . $type . "</option>";
+                        //}
+                    } ?>
                 </select>
             </div>
             <div class="form-group">
                 <label><?php echo $q[$_SESSION['lang']]['formPublication']['e'] ?></label>
                 <select class="form-control" name="actionPublication" required>
-                    <option selected>
-                        <?php
-                            echo $q[$_SESSION['lang']]['formPublication']['d'];
-                        ?>
-                    </option>
                     <?php
                     /*Pour afficher les actions*/
                     $req = $bdd->prepare('SELECT id_action, nom_action from ' . $nameprojetgeneral . '.action');
                     $req->execute();
                     $reqAct = $req->fetchAll();
 
-                    for ($i = 0; $i < sizeof($reqAct); $i++) {
-                        echo "<option value='" . $reqAct[$i]['id_action'] . "'>" . $reqAct[$i]['nom_action'] . "</option>";
-                    } ?>
+                    /*if ($modif) {
+                        for ($i = 0; $i < sizeof($reqAct); $i++) {
+                            echo "<option ";
+                            if ($publication['id_action'] == $reqAct[$i]['id_action']) {
+                                echo " selected ";
+                            }
+                            echo " value='" . $reqAct[$i]['id_action'] . "'>" . $reqAct[$i]['nom_action'] . "</option>";
+                        }
+                    } else {*/
+                        /*echo "<option selected>  
+                            " . $q[$_SESSION['lang']]['formPublication']['d'] . "
+                        </option>";*/
+                        for ($i = 0; $i < sizeof($reqAct); $i++) {
+                            echo "<option value='" . $reqAct[$i]['id_action'] . "'>" . $reqAct[$i]['nom_action'] . "</option>";
+                        }
+                    //}
+                    ?>
                 </select>
             </div>
             <div class="form-group">
@@ -106,18 +128,50 @@ if ($lastPage != "publications.php") {
                     echo $publication['annee_publication'];
                 } ?>" required>
             </div>
+
             <div class="form-group">
-                <label><?php echo $q[$_SESSION['lang']]['formPublication']['f'] ?></label>
-                <input type="text" class="form-control" name="auteurPublication"
-                       placeholder="Nom des auteurs de la publication(ex : Nom P)" maxlength="500"
-                       value="<?php if ($modif) {
-                           echo $publication['auteur_publication'];
-                       } ?>" required>
+                <p class="presAuteur">
+                    <?php echo $q[$_SESSION['lang']]['formPublication']['f'] ?>
+                    <?php
+
+                    $stack = array();
+
+                    for ($i = 0; $i < sizeof($reqUtil); $i++) {
+                        $id_utilisateur = $reqUtil[$i]['id_utilisateur'];
+                        array_push($stack, $id_utilisateur);
+                    }
+
+                    $stmt = $bdd->prepare('SELECT tab1.id_utilisateur, tab1.nom_utilisateur, tab1.prenom_utilisateur 
+																FROM commune.utilisateur as tab1
+																JOIN commune.participer AS tab2
+																ON tab1.id_utilisateur = tab2.id_utilisateur
+																JOIN commune.projet AS tab3 
+																ON tab2.id_projet = tab3.id_projet
+																WHERE tab3.nom_projet = :projetgeneral
+																ORDER BY nom_utilisateur');
+                    $stmt->bindParam(':projetgeneral', $nameprojetgeneral, PDO::PARAM_STR);
+                    $stmt->execute();
+                    $reqU = $stmt->fetchAll();
+                    for ($i = 0; $i < sizeof($reqU); $i++) {
+                        if (in_array(($reqU[$i]['id_utilisateur']), $stack)) {
+                            echo "<div class=\"custom-control custom-checkbox\">
+											<input type=\"checkbox\" name=\"util[]\" class=\"checkbox custom-control-input\" id=\"Check$i\" value=\"" . $reqU[$i]['id_utilisateur'] . "\" checked>
+											<label class=\"custom-control-label\" for=\"Check$i\">" . $reqU[$i]['nom_utilisateur'] . " " . $reqU[$i]['prenom_utilisateur'] . "</label> 
+										</div>";
+                        } else {
+                            echo "<div class=\"custom-control custom-checkbox\">
+											<input type=\"checkbox\" name=\"util[]\" class=\"checkbox custom-control-input\" id=\"Check$i\" value=\"" . $reqU[$i]['id_utilisateur'] . "\">
+											<label class=\"custom-control-label\" for=\"Check$i\">" . $reqU[$i]['nom_utilisateur'] . " " . $reqU[$i]['prenom_utilisateur'] . "</label> 
+										</div>";
+                        }
+                    }
+                    ?>
+                </p>
             </div>
             <div class="form-group">
                 <label><?php echo $q[$_SESSION['lang']]['formPublication']['g'] ?></label>
                 <input type="text" class="form-control" name="informationPublication"
-                       placeholder="Bref information sur la publication" value="<?php if ($modif) {
+                       placeholder="Référence complète sur la publication" value="<?php if ($modif) {
                     echo $publication['information_publication'];
                 } ?>">
             </div>
@@ -179,7 +233,7 @@ if ($lastPage != "publications.php") {
                     foreach ($fichiers as $fichier) {
                         echo "<div class='mediaForm'>
                                 <a class='' href=\"media/pdf/" . $fichier['source_media'] . "\" target='_blank'>
-                                                <img class='figure-img rounded ' src=\"media/icon/pdf.png\">
+                                                <i style=\"font-size:100px; width: 100%;\" class=\"fas fa-file-pdf\"></i> 
                                             </a>
                               <button id='" . $fichier['id_media'] . "' class='mediasDelete btn btn-danger'>" . $q[$_SESSION['lang']]['formPublication']['q'] . "</button></div>";
                     }
