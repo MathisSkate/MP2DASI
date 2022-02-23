@@ -52,20 +52,14 @@ if ($lastPage != "theses.php") {
                 <select class="action-select form-control" name="soutenantThese" required>
                     <?php
                     /*Pour afficher les noms des utlisateurs*/
-                        $req = $bdd->prepare(' 
-                        SELECT
-                            tab1.prenom_utilisateur,
-                            tab1.nom_utilisateur,
-                            tab2.id_utilisateur_detail
-                        FROM
-                            commune.utilisateur AS tab1
-                        JOIN utilisateur_detail AS tab2
-                        ON
-                            tab1.id_utilisateur = tab2.id_utilisateur
-                        ORDER BY
-                            tab1.nom_utilisateur ASC');
+                    $req = $bdd->prepare('SELECT tab1.id_utilisateur, tab1.nom_utilisateur, tab1.prenom_utilisateur FROM commune.utilisateur as tab1
+                                                JOIN commune.participer AS tab2 ON tab1.id_utilisateur = tab2.id_utilisateur
+                                                JOIN commune.projet AS tab3 ON tab2.id_projet = tab3.id_projet
+                                                WHERE tab3.nom_projet = :projetgeneral ORDER BY nom_utilisateur');
+                    $req->bindParam(':projetgeneral', $nameprojetgeneral, PDO::PARAM_STR);
                     $req->execute();
                     $reqUtiDet = $req->fetchAll();
+                    print_r($reqUtiDet);
 
                     if ($modif) {
                         for ($i = 0; $i < sizeof($reqUtiDet); $i++) {
