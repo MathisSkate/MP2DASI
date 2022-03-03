@@ -12,6 +12,15 @@ $types = explode("','", $enumType);
 //Récupérer le nom de la page précédente
 $lastPage = basename($_SERVER['HTTP_REFERER']);
 $modif = false;
+$idPub = substr($lastPage, 28);
+/*Pour afficher les personnes en lien avec l'action*/
+$req = $bdd->prepare('SELECT tab1.id_utilisateur, tab1.nom_utilisateur, tab1.prenom_utilisateur FROM commune.utilisateur AS tab1
+                                JOIN ' . $nameprojetgeneral . '.utilisateur_detail AS tab2 ON tab1.id_utilisateur = tab2.id_utilisateur
+                                JOIN ' . $nameprojetgeneral . '.publier AS tab3 ON tab2.id_utilisateur_detail = tab3.id_utilisateur_detail   
+                                JOIN ' . $nameprojetgeneral . '.publication AS tab4 ON tab3.id_publication = tab4.id_publication
+                                WHERE tab3.id_publication = :idPubli');
+$req->execute([':idPubli' => $idPub]);
+$reqUtil = $req->fetchAll();
 
 //Pour différencier Ajout ou Modif
 if ($lastPage != "publications.php") {
@@ -23,28 +32,6 @@ if ($lastPage != "publications.php") {
     $reqPub = $bdd->prepare("SELECT titre_publication, annee_publication, type_publication, information_publication, lien_publication, id_action FROM publication WHERE id_publication = " . $idPub . " ");
     $reqPub->execute();
     $publication = $reqPub->fetch();
-
-    /*Pour afficher les personnes en lien avec l'action*/
-    $req = $bdd->prepare('
-    SELECT
-        tab1.id_utilisateur,
-        tab1.nom_utilisateur,
-        tab1.prenom_utilisateur
-    FROM
-        commune.utilisateur AS tab1
-    JOIN ' . $nameprojetgeneral . '.utilisateur_detail AS tab2
-    ON
-        tab1.id_utilisateur = tab2.id_utilisateur
-    JOIN ' . $nameprojetgeneral . '.publier AS tab3
-    ON
-        tab2.id_utilisateur_detail = tab3.id_utilisateur_detail   
-    JOIN ' . $nameprojetgeneral . '.publication AS tab4
-    ON
-        tab3.id_publication = tab4.id_publication
-    WHERE 
-        tab3.id_publication = :idPubli');
-    $req->execute([':idPubli' => $idPub]);
-    $reqUtil = $req->fetchAll();
 
     //Requête pour récupéré média si modif
     $images = selectMedia($bdd, 'publication', $idPub, 'image');
