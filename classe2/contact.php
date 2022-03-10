@@ -146,7 +146,7 @@ $reqUtil = $req->fetchAll();
 
                             </div>
                             <div class="form-label-group">
-                                <textarea class="form-control" id="inputDescriptionMail" name="inputDescriptionMail" required></textarea>
+                                <textarea class="form-control" id="inputDescriptionMail" name="inputDescriptionMail" placeholder="<?= $q[$_SESSION["lang"]]['contact']['h'] ?>" required></textarea>
                             </div>
                         </article>
                     </section>
